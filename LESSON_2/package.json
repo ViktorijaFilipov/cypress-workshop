@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress-cli-production": "cypress open --env configFile=cypress.production",
-    "cypress-headed-production": "cypress run -b chrome --env configFile=cypress.production",
-    "cypress-headless-production": "cypress run --headless -b chrome --env configFile=cypress.production",
+    "cypress-cli": "cypress open",
+    "cypress-headed": "cypress run -b chrome",
+    "cypress-headless": "cypress run --headless -b chrome",
     "eslint": "eslint cypress",
     "eslint-fix": "eslint cypress --fix"
   },

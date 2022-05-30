@@ -1,6 +1,0 @@
-{
-  "baseUrl": "https://demoqa.com/",
-  "env": {
-    "apiPath": "https://demoqa.com"
-  }
-}
