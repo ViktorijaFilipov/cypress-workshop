@@ -1,0 +1,9 @@
+{
+    "baseUrl": "https://demoqa.com",
+    "defaultCommandTimeout": 5000,
+    "video": false,
+    "chromeWebSecurity": false,
+    "retries": 3,
+    "viewportWidth": 1920,
+    "viewportHeight": 1080
+}
