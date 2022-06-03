@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('My First Test', () => 
+describe('My First Test', () => {
     before(() => {
         // runs once before all tests in the block
     })
