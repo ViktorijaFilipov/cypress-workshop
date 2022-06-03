@@ -9,7 +9,7 @@ describe('My First Test', () => {
         // runs before each test in the block
     })
 
-    it('Does not do much!', () => {
+    it('Does not do much!', () => 
         cy.visit('/automation-practice-form');
         expect(true).to.equal(true)
     })
