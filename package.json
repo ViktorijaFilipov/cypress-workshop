@@ -1,0 +1,19 @@
+{
+  "name": "cypress-workshop",
+  "version": "1.0.0",
+  "description": "WORKSHOP - WEB TEST AUTOMATION WITH CYPRESS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorijaFilipov/cypress-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktorijaFilipov/cypress-workshop/issues"
+  },
+  "homepage": "https://github.com/ViktorijaFilipov/cypress-workshop#readme"
+}
