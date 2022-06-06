@@ -1,32 +1,42 @@
 /// <reference types="Cypress" />
 
-describe('My First Test', () => {
+describe('Context: My First Test', () => {
   before(() => {
-    // runs once before all tests in the block
+    // runs once before all tests in the block (before all "it" blocks)
   });
 
-  beforeEach(() => {
-    // runs before each test in the block
+  beforeEach('Clear Cookies', () => {
+    // runs before each test in the block (before each "it" blocks)
+    cy.clearCookies();
   });
 
-  it('Does not do much!', () => {
+  after('Log something after all test runs', () => {
+    // runs once after all tests in the block (after all "it" blocks)
+    cy.log('we completed this test run!');
+  });
+
+  afterEach(() => {
+    // runs after each test in the block (after each "it" blocks)
+  });
+
+  it('Test 1', () => {
     cy.visit('/automation-practice-form');
     expect(true).to.equal(true);
   });
 
-  it('Does not do much!', () => {
+  it('Test 2', () => {
     expect(true).to.equal(true);
   });
 
-  it('Does not do much!', () => {
+  xit('Test 3', () => {
     expect(true).to.equal(true);
   });
 
-  afterEach(() => {
-    // runs after each test in the block
+  it.skip('Test 4', () => {
+    expect(true).to.equal(true);
   });
 
-  after(() => {
-    // runs once after all tests in the block
+  it.only('Test 5', () => {
+    expect(true).to.equal(true);
   });
 });
