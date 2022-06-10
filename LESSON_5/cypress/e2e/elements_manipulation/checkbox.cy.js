@@ -21,13 +21,13 @@ describe('Checkboxes: Checkbox actions', () => {
       cy.contains('.text-success', 'commands');
 
       // Uncheck notes
-      cy.wrap(checkbox).eq(2).click({ force: true }).should('not.be.checked');
+      cy.wrap(checkbox).eq(2).uncheck({ force: true }).should('not.be.checked');
       cy.contains('.text-success', 'notes').should('not.exist');
 
       /* Select every checkbox in the tree, uncheck Notes and then select Notes by 
           not specifying exact Notes checkbox index */
       cy.wrap(checkbox).eq(0).check({ force: true }).should('be.checked');
-      cy.wrap(checkbox).eq(2).click({ force: true }).should('not.be.checked');
+      cy.wrap(checkbox).eq(2).uncheck({ force: true }).should('not.be.checked');
 
       cy.wrap(checkbox).check({ force: true }).should('be.checked');
       cy.contains('.text-success', 'notes');
