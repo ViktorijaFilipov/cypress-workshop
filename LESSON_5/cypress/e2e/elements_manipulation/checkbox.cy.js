@@ -15,6 +15,7 @@ describe('Checkboxes: Checkbox actions', () => {
     // Get all checkboxes, select Desktop folder and everything under desktop folder.
     cy.get('[type="checkbox"]').then((checkbox) => {
       cy.wrap(checkbox).eq(1).check({ force: true }).should('be.checked');
+
       // Verify that correct text is displayed for chosen options
       cy.contains('.text-success', 'desktop');
       cy.contains('.text-success', 'notes');
@@ -25,7 +26,7 @@ describe('Checkboxes: Checkbox actions', () => {
       cy.contains('.text-success', 'notes').should('not.exist');
 
       /* Select every checkbox in the tree, uncheck Notes and then select Notes by 
-          not specifying exact Notes checkbox index */
+        not specifying exact Notes checkbox index */
       cy.wrap(checkbox).eq(0).check({ force: true }).should('be.checked');
       cy.wrap(checkbox).eq(2).uncheck({ force: true }).should('not.be.checked');
 
