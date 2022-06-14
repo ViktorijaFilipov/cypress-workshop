@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 
-describe('Datepicker: Datepicker actions', () => {
-  beforeEach('Navigate to datepicker page', () => {
+describe('Date picker: Date picker actions', () => {
+  beforeEach('Navigate to date picker page', () => {
     cy.visit('/date-picker');
   });
 
   it('Check fixed date selection', () => {
-    // Open datepicker
+    // Open date picker
     cy.get('#datePickerMonthYearInput').click();
     // Select year
     cy.get('.react-datepicker__year-select').select('2030');
@@ -26,7 +26,7 @@ describe('Datepicker: Datepicker actions', () => {
     const year = date.getFullYear();
     const month = date.getMonth();
     const day = 23;
-    // Open datepicker
+    // Open date picker
     cy.get('#datePickerMonthYearInput').click();
     // Select year
     cy.get('.react-datepicker__year-select').select(`${year}`);
