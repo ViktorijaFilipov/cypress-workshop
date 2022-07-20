@@ -13,7 +13,7 @@ describe('Date picker: Date picker actions', () => {
     // Select month
     cy.get('.react-datepicker__month-select').select('June');
     // Select day
-    cy.get(`.react-datepicker__day--0${23}`).first.click();
+    cy.get(`.react-datepicker__day--0${23}`).first().click();
     // Assert input date value
     cy.get('#datePickerMonthYearInput').should('have.value', '06/23/2030');
   });
