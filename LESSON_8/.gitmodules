@@ -1,0 +1,3 @@
+[submodule "LESSON_7"]
+	path = LESSON_7
+	url = git@github.com:ViktorijaFilipov/cypress-workshop.git
