@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe('Alerts: Alerts actions', () => {
-    before('Navigate to Alerts page', () => {
+    beforeEach('Navigate to Alerts page', () => {
         cy.visit('/alerts');
     });
 

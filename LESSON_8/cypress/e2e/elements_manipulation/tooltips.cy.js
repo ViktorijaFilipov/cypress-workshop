@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 describe('Tooltips: Tooltips actions', () => {
-    before('Navigate to Tooltips page', () => {
+    beforeEach('Navigate to Tooltips page', () => {
         cy.visit('/tool-tips');
     });
 
