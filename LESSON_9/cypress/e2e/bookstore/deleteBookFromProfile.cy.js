@@ -23,6 +23,14 @@ describe('Collections: Delete Book From Collection', () => {
     });
   });
 
+  // Delete the book from collection
+  after('Delete book from profile collection', () => {
+    cy.fixture('books').then((books) => {
+      profileActions.deleteBookFromTable(books.collection1.SpeakingJS, 'ok');
+      cy.verifyWindowAlertText(`Book deleted.`);
+    });
+  });
+
   it('Check deleting book from profile collection - confirm deletion', () => {
     cy.fixture('books').then((books) => {
       // Navigate to user profile
