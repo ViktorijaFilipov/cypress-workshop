@@ -20,11 +20,8 @@ describe('Auth: Login user', () => {
   });
 
   it('Check invalid user credentials', () => {
-    // Load users fixture
-    cy.fixture('users').then(() => {
-      // Perform login
-      auth.login('invalid345', 'invalid345');
-    });
+    // Perform login
+    auth.login('invalid345', 'invalid345');
     // Verify that user is still on login page (user is not logged in)
     cy.url().should('contain', '/login');
     // Verify that error message is displayed
