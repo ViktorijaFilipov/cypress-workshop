@@ -1,14 +1,14 @@
 export class NavigateTo {
   login() {
-    cy.visit('/login');
+    cy.visit(Cypress.env('login'));
   }
 
   profile() {
-    cy.visit('/profile');
+    cy.visit(Cypress.env('profile'));
   }
 
-  bookStoreFromProfile() {
-    cy.get('#gotoStore').click();
+  bookStore() {
+    cy.visit(Cypress.env('books'));
   }
 }
 
