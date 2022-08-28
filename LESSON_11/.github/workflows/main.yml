@@ -1,12 +1,12 @@
 name: Cypress Tests
 
 on:
+  schedule:
+  #schedule at 10:00 on Sunday
+  - cron: '0 10 * * sun'
   push:
     branches:
       - main
-  schedule:
-    # runs tests at 02:00 on Sunday
-    - cron: '0 2 * * sun'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
